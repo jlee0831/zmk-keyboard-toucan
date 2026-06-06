@@ -6,6 +6,12 @@
 #define SYM  2
 #define ADJ  3
 
+&mt {
+    tapping-term-ms = <200>;
+    quick-tap-ms = <175>;
+    flavor = "tap-preferred";
+};
+
 / {
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
@@ -60,6 +66,18 @@
 &trans  &trans  &trans  &trans                    &trans                     &kp LEFT_ARROW  &kp DOWN_ARROW  &trans    &trans  &trans        &trans  &trans
 &trans  &trans  &trans  &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &trans
             >;
+        };
+
+        extra_1 {
+            status = "reserved";
+        };
+
+        extra_2 {
+            status = "reserved";
+        };
+
+        extra_3 {
+            status = "reserved";
         };
     };
 };
