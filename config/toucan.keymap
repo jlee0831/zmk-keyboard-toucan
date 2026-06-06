@@ -23,20 +23,20 @@
         base {
             display-name = "BASE";
             bindings = <
-&lt 1 TAB         &kp Q                &kp W             &kp E                    &kp R                    &kp T   &kp Y  &kp U  &kp I      &kp O    &kp P     &lt 1 BACKSLASH
-&mt LCTRL ESCAPE  &kp A                &kp S             &kp D                    &mt LS(LA(LG(LCTRL))) F  &kp G   &kp H  &kp J  &kp K      &kp L    &kp SEMI  &mt RCTRL SINGLE_QUOTE
-&mt LSHFT GRAVE   &kp Z                &kp X             &kp C                    &kp V                    &kp B   &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-&tog 2            &mt LEFT_ALT RETURN  &kp LEFT_COMMAND  &mt RIGHT_COMMAND SPACE  &mt RIGHT_ALT BACKSPACE  &tog 2
+&lt 1 TAB         &kp Q         &kp W                   &kp E                    &kp R                    &kp T   &kp Y  &kp U  &kp I      &kp O    &kp P     &lt 1 BACKSLASH
+&mt LCTRL ESCAPE  &kp A         &kp S                   &kp D                    &mt LS(LA(LG(LCTRL))) F  &kp G   &kp H  &kp J  &kp K      &kp L    &kp SEMI  &mt RCTRL SINGLE_QUOTE
+&mt LSHFT GRAVE   &kp Z         &kp X                   &kp C                    &kp V                    &kp B   &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+&tog 2            &kp LEFT_ALT  &mt LEFT_COMMAND ENTER  &mt RIGHT_COMMAND SPACE  &mt RIGHT_ALT BACKSPACE  &tog 2
             >;
         };
 
         sym {
             display-name = "SYM";
             bindings = <
-&kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS          &kp KP_MULTIPLY    &kp LPAR        &kp RPAR  &trans
-&trans     &trans    &trans  &trans    &trans    &trans     &kp PLUS   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS       &trans    &trans
-&trans     &trans    &trans  &trans    &trans    &trans     &kp EQUAL  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp UNDERSCORE  &trans    &trans
-&trans     &trans    &trans  &trans    &trans    &trans
+&kp TILDE  &kp EXCL  &kp AT  &kp HASH              &kp DLLR               &kp PRCNT  &kp CARET  &kp AMPS          &kp KP_MULTIPLY    &kp LPAR        &kp RPAR  &trans
+&trans     &trans    &trans  &trans                &trans                 &trans     &kp PLUS   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS       &trans    &trans
+&trans     &trans    &trans  &trans                &trans                 &trans     &kp EQUAL  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp UNDERSCORE  &trans    &trans
+&trans     &trans    &trans  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &trans
             >;
         };
 
