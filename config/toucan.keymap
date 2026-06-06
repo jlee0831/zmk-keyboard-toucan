@@ -1,6 +1,5 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
 #define NAV  1
@@ -23,9 +22,9 @@
         base {
             display-name = "BASE";
             bindings = <
-&lt 1 TAB         &kp Q         &kp W                   &kp E                    &kp R                    &kp T    &kp Y  &kp U  &kp I      &kp O    &kp P     &lt 1 BACKSLASH
-&mt LCTRL ESCAPE  &kp A         &kp S                   &kp D                    &mt LS(LA(LG(LCTRL))) F  &lt 4 G  &kp H  &kp J  &kp K      &kp L    &kp SEMI  &mt RCTRL SINGLE_QUOTE
-&mt LSHFT GRAVE   &kp Z         &kp X                   &kp C                    &kp V                    &kp B    &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+&lt 1 TAB         &kp Q         &kp W                   &kp E                    &kp R                    &kp T   &kp Y  &kp U  &kp I      &kp O    &kp P     &lt 1 BACKSLASH
+&mt LCTRL ESCAPE  &lt 4 A       &kp S                   &kp D                    &mt LS(LA(LG(LCTRL))) F  &kp G   &kp H  &kp J  &kp K      &kp L    &kp SEMI  &mt RCTRL SINGLE_QUOTE
+&mt LSHFT GRAVE   &kp Z         &kp X                   &kp C                    &kp V                    &kp B   &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
 &tog 2            &kp LEFT_ALT  &mt LEFT_COMMAND ENTER  &mt RIGHT_COMMAND SPACE  &mt RIGHT_ALT BACKSPACE  &tog 2
             >;
         };
@@ -33,10 +32,10 @@
         sym {
             display-name = "SYM";
             bindings = <
-&kp TILDE  &kp EXCL  &kp AT  &kp HASH              &kp DLLR               &kp PRCNT  &kp CARET  &kp AMPS          &kp KP_MULTIPLY    &kp LPAR        &kp RPAR  &trans
-&trans     &trans    &trans  &trans                &trans                 &trans     &kp PLUS   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS       &trans    &trans
-&trans     &trans    &trans  &trans                &trans                 &trans     &kp EQUAL  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp UNDERSCORE  &trans    &trans
-&trans     &trans    &trans  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &trans
+&kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS          &kp KP_MULTIPLY    &kp LPAR        &kp RPAR  &trans
+&trans     &trans    &trans  &trans    &trans    &trans     &kp PLUS   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS       &trans    &trans
+&trans     &trans    &trans  &trans    &trans    &trans     &kp EQUAL  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp UNDERSCORE  &trans    &trans
+&trans     &trans    &trans  &trans    &trans    &trans
             >;
         };
 
@@ -63,10 +62,10 @@
         nav {
             display-name = "NAV";
             bindings = <
-&trans  &trans  &trans  &trans     &trans     &trans          &trans          &trans    &trans  &kp UP_ARROW  &trans  &trans
-&trans  &trans  &trans  &trans     &kp RIGHT  &trans          &kp LEFT        &kp DOWN  &kp UP  &kp RIGHT     &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &trans    &trans  &trans        &trans  &trans
-&trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans
+&trans  &trans  &trans  &trans                &trans                 &trans          &trans          &trans    &trans  &kp UP_ARROW  &trans  &trans
+&trans  &trans  &trans  &trans                &kp RIGHT              &trans          &kp LEFT        &kp DOWN  &kp UP  &kp RIGHT     &trans  &trans
+&trans  &trans  &trans  &trans                &trans                 &kp LEFT_ARROW  &kp DOWN_ARROW  &trans    &trans  &trans        &trans  &trans
+&trans  &trans  &trans  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &trans
             >;
         };
     };
