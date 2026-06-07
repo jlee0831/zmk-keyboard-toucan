@@ -111,10 +111,10 @@
         num {
             display-name = "NUM";
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9         &kp NUMBER_0  &trans
-&trans  &trans        &trans        &trans        &sl 3         &trans        &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &mt MINUS NUMBER_6   &trans        &trans
-&trans  &trans        &trans        &trans        &trans        &trans        &kp EQUAL     &kp NUMBER_1  &kp NUMBER_2  &mt PERIOD NUMBER_3  &trans        &trans
-&trans  &mkp LCLK     &mkp RCLK     &trans        &trans        &kp NUMBER_0
+&trans       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9         &kp NUMBER_0  &trans
+&trans       &trans        &trans        &trans        &sl 3         &trans        &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &mt MINUS NUMBER_6   &trans        &trans
+&trans       &trans        &trans        &trans        &trans        &trans        &kp EQUAL     &kp NUMBER_1  &kp NUMBER_2  &mt PERIOD NUMBER_3  &trans        &trans
+&trans        &mkp LCLK     &mkp RCLK     &trans        &kh_toggle    &kp NUMBER_0
             >;
         };
 
