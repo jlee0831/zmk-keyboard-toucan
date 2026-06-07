@@ -41,6 +41,13 @@
             bindings = <&kp N>, <&kp DOWN>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
+        ec_n_wrap: ec_n_wrap {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&ec_n>, <&kp N>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
+        };
         ec_p: ec_p {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -71,7 +78,7 @@
             bindings = <
 &lt 1 TAB         &kp Q             &kp W               &kp E                    &kp R                           &kp T   &kp Y  &kp U  &kp I      &kp O    &ec_p     &lt 1 BACKSLASH
 &mt LCTRL ESCAPE  &kp A             &kp S               &kp D                    &em_f                           &kp G   &kp H  &kp J  &kp K      &kp L    &kp SEMI  &mt RCTRL SINGLE_QUOTE
-&mt LSHFT GRAVE   &kp Z             &kp X               &kp C                    &kp V                           &em_b   &ec_n  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+&mt LSHFT GRAVE   &kp Z             &kp X               &kp C                    &kp V                           &em_b   &ec_n_wrap  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
 &mo_tog 2 2       &kp LEFT_COMMAND  &mt LEFT_ALT ENTER  &mt RIGHT_ALT BACKSPACE  &mt RIGHT_COMMAND SPACE         &mo_tog 2 2
             >;
         };
