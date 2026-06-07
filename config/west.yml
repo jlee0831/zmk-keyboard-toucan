@@ -10,8 +10,6 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: geeksville
       url-base: https://github.com/geeksville
-    - name: carrefinho
-      url-base: https://github.com/carrefinho
     - name: jlee0831
       url-base: https://github.com/jlee0831
   projects:
@@ -24,8 +22,8 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: v0.3
-    - name: prospector-zmk-module
+    - name: zmk-dongle-screen
       remote: jlee0831
-      revision: feat/key-history-display
+      revision: feat/key-history
   self:
     path: config
