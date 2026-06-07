@@ -12,6 +12,8 @@ manifest:
       url-base: https://github.com/geeksville
     - name: carrefinho
       url-base: https://github.com/carrefinho
+    - name: jlee0831
+      url-base: https://github.com/jlee0831
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -23,7 +25,7 @@ manifest:
       remote: caksoylar
       revision: v0.3
     - name: prospector-zmk-module
-      remote: carrefinho
-      revision: main
+      remote: jlee0831
+      revision: feat/key-history-display
   self:
     path: config
