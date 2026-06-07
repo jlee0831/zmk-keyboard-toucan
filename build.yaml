@@ -22,7 +22,7 @@ include:
   - board: seeeduino_xiao_ble
     shield: toucan_dongle rgbled_adapter prospector_adapter
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_TOUCAN_KEY_HISTORY=y
   - board: seeeduino_xiao_ble
     shield: toucan_left rgbled_adapter toucan_pet
   - board: seeeduino_xiao_ble
