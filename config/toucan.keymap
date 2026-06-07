@@ -1,10 +1,11 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
-#define NAV  1
-#define SYM  2
-#define ADJ  3
+#define SYM  1
+#define NUM  2
+#define FNC  3
 
 &mt {
     tapping-term-ms = <200>;
@@ -91,7 +92,7 @@
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9         &kp NUMBER_0  &trans
 &trans  &trans        &trans        &trans        &sl 3         &trans        &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &mt MINUS NUMBER_6   &trans        &trans
 &trans  &trans        &trans        &trans        &trans        &trans        &kp EQUAL     &kp NUMBER_1  &kp NUMBER_2  &mt PERIOD NUMBER_3  &trans        &trans
-&trans  &trans        &trans        &trans        &trans        &kp NUMBER_0
+&trans  &mkp LCLK     &mkp RCLK     &trans        &trans        &kp NUMBER_0
             >;
         };
 
