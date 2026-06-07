@@ -19,8 +19,44 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-
             bindings = <&mo>, <&tog>;
+        };
+
+        ec_f: ec_f {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mt LS(LA(LC(LEFT_COMMAND))) F>, <&kp RIGHT>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        ec_b: ec_b {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp B>, <&kp LEFT>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        ec_n: ec_n {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N>, <&kp DOWN>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        ec_p: ec_p {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp P>, <&kp UP>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        em_f: em_f {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&ec_f>, <&kp LA(RIGHT)>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+        em_b: em_b {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&ec_b>, <&kp LA(LEFT)>;
+            mods = <(MOD_LALT|MOD_RALT)>;
         };
     };
 
@@ -32,9 +68,9 @@
         base {
             display-name = "BASE";
             bindings = <
-&lt 1 TAB         &kp Q             &kp W               &kp E                    &kp R                           &kp T   &kp Y  &kp U  &kp I      &kp O    &kp P     &lt 1 BACKSLASH
-&mt LCTRL ESCAPE  &lt 4 A           &kp S               &kp D                    &mt LS(LA(LC(LEFT_COMMAND))) F  &kp G   &kp H  &kp J  &kp K      &kp L    &kp SEMI  &mt RCTRL SINGLE_QUOTE
-&mt LSHFT GRAVE   &kp Z             &kp X               &kp C                    &kp V                           &kp B   &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+&lt 1 TAB         &kp Q             &kp W               &kp E                    &kp R                           &kp T   &kp Y  &kp U  &kp I      &kp O    &ec_p     &lt 1 BACKSLASH
+&mt LCTRL ESCAPE  &kp A             &kp S               &kp D                    &em_f                           &kp G   &kp H  &kp J  &kp K      &kp L    &kp SEMI  &mt RCTRL SINGLE_QUOTE
+&mt LSHFT GRAVE   &kp Z             &kp X               &kp C                    &kp V                           &em_b   &ec_n  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
 &mo_tog 2 2       &kp LEFT_COMMAND  &mt LEFT_ALT ENTER  &mt RIGHT_ALT BACKSPACE  &mt RIGHT_COMMAND SPACE         &mo_tog 2 2
             >;
         };
@@ -43,7 +79,7 @@
             display-name = "SYM";
             bindings = <
 &kp TILDE  &kp EXCL  &kp AT  &kp HASH                  &kp DLLR                   &kp PRCNT  &kp CARET  &kp AMPS          &kp KP_MULTIPLY    &kp LPAR        &kp RPAR  &trans
-&trans     &trans    &trans  &trans                    &sl 4                      &trans     &kp PLUS   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS       &trans    &trans
+&trans     &trans    &trans  &trans                    &trans                     &trans     &kp PLUS   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS       &trans    &trans
 &trans     &trans    &trans  &trans                    &trans                     &trans     &kp EQUAL  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp UNDERSCORE  &trans    &trans
 &trans     &trans    &trans  &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &trans
             >;
@@ -66,16 +102,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &kp K_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp F11  &kp F12  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &kp RG(NUMBER_0)  &kp RG(MINUS)      &kp RG(EQUAL)    &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        nav {
-            display-name = "NAV";
-            bindings = <
-&trans  &trans  &trans  &trans                    &trans                     &trans          &trans          &trans    &trans  &kp UP_ARROW  &trans  &trans
-&trans  &trans  &trans  &trans                    &kp RIGHT                  &trans          &kp LEFT        &kp DOWN  &kp UP  &kp RIGHT     &trans  &trans
-&trans  &trans  &trans  &trans                    &trans                     &kp LEFT_ARROW  &kp DOWN_ARROW  &trans    &trans  &trans        &trans  &trans
-&trans  &trans  &trans  &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &trans
             >;
         };
 
