@@ -72,18 +72,6 @@
             label = "KH_TOGGLE";
             #binding-cells = <0>;
         };
-        kh_scroll_up: kh_scroll_up {
-            compatible = "zmk,key-history-scroll";
-            label = "KH_SCROLL_UP";
-            #binding-cells = <0>;
-            direction = <0>;
-        };
-        kh_scroll_down: kh_scroll_down {
-            compatible = "zmk,key-history-scroll";
-            label = "KH_SCROLL_DOWN";
-            #binding-cells = <0>;
-            direction = <1>;
-        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -127,7 +115,7 @@
 &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6            &kp F7             &kp F8           &kp F9   &kp F10  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &kp K_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp F11  &kp F12  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &kp RG(NUMBER_0)  &kp RG(MINUS)      &kp RG(EQUAL)    &trans   &trans   &trans
-&kh_toggle  &kh_scroll_up  &kh_scroll_down  &trans  &trans  &trans
+&kh_toggle  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
